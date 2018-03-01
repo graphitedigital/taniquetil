@@ -1,0 +1,178 @@
+@keyframes loadingIcon
+    0%
+        border-top-color: Colors.primary
+        border-right-color: Colors.paleBlue
+        border-bottom-color: Colors.primary
+        border-left-color: Colors.paleBlue
+        border-top-width 24px
+        border-right-width 8px
+        border-bottom-width 24px
+        border-left-width 8px
+        transform rotate(0deg)
+        animation-timing-function ease-in-out
+    6%
+        border-top-color: Colors.primary
+        border-right-color: Colors.paleBlue
+        border-bottom-color: Colors.primary
+        border-left-color: Colors.paleBlue
+        border-top-width 8px
+        border-right-width 24px
+        border-bottom-width 8px
+        border-left-width 24px
+    12%
+        border-top-color: Colors.paleBlue
+        border-right-color: Colors.primary
+        border-bottom-color: Colors.paleBlue
+        border-left-color: Colors.primary
+        border-top-width 24px
+        border-right-width 8px
+        border-bottom-width 24px
+        border-left-width 8px
+        transform rotate(80deg)
+        animation-timing-function linear
+    25%
+        border-top-color: Colors.paleBlue
+        border-right-color: Colors.primary
+        border-bottom-color: Colors.paleBlue
+        border-left-color: Colors.primary
+        border-top-width 24px
+        border-right-width 8px
+        border-bottom-width 24px
+        border-left-width 8px
+        transform rotate(90deg)
+        animation-timing-function ease-in-out
+    31%
+        border-top-color: Colors.paleBlue
+        border-right-color: Colors.primary
+        border-bottom-color: Colors.paleBlue
+        border-left-color: Colors.primary
+        border-top-width 8px
+        border-right-width 24px
+        border-bottom-width 8px
+        border-left-width 24px
+    37%
+        border-top-color: Colors.primary
+        border-right-color: Colors.paleBlue
+        border-bottom-color: Colors.primary
+        border-left-color: Colors.paleBlue
+        border-top-width 24px
+        border-right-width 8px
+        border-bottom-width 24px
+        border-left-width 8px
+        transform rotate(170deg)
+        animation-timing-function linear
+    50%
+        border-top-color: Colors.primary
+        border-right-color: Colors.paleBlue
+        border-bottom-color: Colors.primary
+        border-left-color: Colors.paleBlue
+        border-top-width 24px
+        border-right-width 8px
+        border-bottom-width 24px
+        border-left-width 8px
+        transform rotate(180deg)
+        animation-timing-function ease-in-out
+    56%
+        border-top-color: Colors.primary
+        border-right-color: Colors.paleBlue
+        border-bottom-color: Colors.primary
+        border-left-color: Colors.paleBlue
+        border-top-width 8px
+        border-right-width 24px
+        border-bottom-width 8px
+        border-left-width 24px
+    62%
+        border-top-color: Colors.paleBlue
+        border-right-color: Colors.primary
+        border-bottom-color: Colors.paleBlue
+        border-left-color: Colors.primary
+        border-top-width 24px
+        border-right-width 8px
+        border-bottom-width 24px
+        border-left-width 8px
+        transform rotate(260deg)
+        animation-timing-function linear
+    75%
+        border-top-color: Colors.paleBlue
+        border-right-color: Colors.primary
+        border-bottom-color: Colors.paleBlue
+        border-left-color: Colors.primary
+        border-top-width 24px
+        border-right-width 8px
+        border-bottom-width 24px
+        border-left-width 8px
+        transform rotate(270deg)
+        animation-timing-function ease-in-out
+    81%
+        border-top-color: Colors.paleBlue
+        border-right-color: Colors.primary
+        border-bottom-color: Colors.paleBlue
+        border-left-color: Colors.primary
+        border-top-width 8px
+        border-right-width 24px
+        border-bottom-width 8px
+        border-left-width 24px
+    87%
+        border-top-color: Colors.primary
+        border-right-color: Colors.paleBlue
+        border-bottom-color: Colors.primary
+        border-left-color: Colors.paleBlue
+        border-top-width 24px
+        border-right-width 8px
+        border-bottom-width 24px
+        border-left-width 8px
+        transform rotate(350deg)
+        animation-timing-function linear
+    100%
+        border-top-color: Colors.primary
+        border-right-color: Colors.paleBlue
+        border-bottom-color: Colors.primary
+        border-left-color: Colors.paleBlue
+        border-top-width 24px
+        border-right-width 8px
+        border-bottom-width 24px
+        border-left-width 8px
+        transform rotate(360deg)
+        animation-timing-function ease-in-out
+
+.loadingIcon
+    box-sizing border-box
+    width 48px
+    height 48px
+    border solid 6px
+    border-top-color: Colors.primary
+    border-right-color: Colors.paleBlue
+    border-bottom-color: Colors.primary
+    border-left-color: Colors.paleBlue
+    border-radius 50%
+    background-color #ffffff
+    animation loadingIcon 2.5s ease-in-out infinite
+
+.loading
+    position relative
+
+    &:before
+        content ''
+        position absolute
+        top 0
+        left 0
+        z-index 9
+        height 100%
+        width 100%
+        background-color rgba(#ffffff, 0.8)
+
+    &:after
+        @extends .loadingIcon
+        content ''
+        position absolute
+        top 50%
+        left 50%
+        z-index 10
+        margin-top -24px
+        margin-left -24px
+
+.loadingDark
+    @extend .loading
+
+    &:before
+        background-color rgba(#000000, 0.8)

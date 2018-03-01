@@ -1,0 +1,127 @@
+@keyframes checkboxHighlight
+    from
+        width 0
+        height 0
+        margin-top 0
+        margin-left 0
+        opacity 1
+    to
+        width 80px
+        height 80px
+        margin-top -40px
+        margin-left -40px
+        opacity 0
+
+.input
+input[type="text"]
+input[type="email"]
+input[type="number"]
+input[type="password"]
+input[type="tel"]
+input[type="date"]
+input[type="time"]
+input[type="url"]
+input[type="search"]
+textarea
+    appearance none
+    box-sizing border-box
+    width 100%
+    padding 16px 16px
+    color: Colors.defaultText
+    line-height 1.2
+    border solid 2px #dddddd
+    border-radius 2px
+    background-color transparent
+    transition border-color .1s ease
+
+    &:hover
+        border-color #c0c0d0
+
+    &:focus
+        border-color: Colors.primary
+
+input[type=number]::-webkit-inner-spin-button
+input[type=number]::-webkit-outer-spin-button
+    -webkit-appearance none
+    margin 0
+
+label
+
+    input[type="checkbox"]
+    input[type="radio"]
+        display none
+
+    input[type="checkbox"] + i
+    input[type="radio"] + i
+        display inline-block
+        vertical-align middle
+        position relative
+        line-height 1
+
+        &:before
+            content ''
+            display inline-block
+            vertical-align middle
+            position relative
+            z-index 2
+            width 18px
+            height 18px
+            border solid 2px #dddddd
+            border-radius 2px
+            background-color #ffffff
+            background-repeat no-repeat
+            background-position center center
+            background-size 16px 16px
+            cursor pointer
+
+        &:after
+            content ''
+            position absolute
+            z-index 1
+            width 0
+            height 0
+            top 50%
+            left 50%
+            border-radius 50%
+            background-color #cccccc
+            opacity 1
+
+    input[type="checkbox"]:checked + i
+    input[type="radio"]:checked + i
+
+        &:before
+            border solid 2px #aaaaaa
+            background-image: url(unquote('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAWBJREFUeNrsmNENgjAQhltdgBEcgRFwE9xA33x0A0eAFZxARnAERnAErwkYFUpb7nptY//k0heSfh8k9K5C5OTk5ISMjBWsqqoClivUqeu6Z1ICA/wdqoR6QO11EjJy+DFaCZkA/KKETAReKyETgp+VkInBTyQ2CcKL4fk66BdAwKu08PYPwQSo4IMIUMKrbCw2rGOFNwrAhg0szbBGB6+yNcCPb7/cQfq+v8UErxX4gRcYCZ/wswIa+FUSvuEnAgZ4JwkO+C8BS3grCS74twBseITl7Hqcz0lwwn/+RtuhQXJN/fmL5Yb/Oomxm6vZlRt+0kogJVR/XnDCz/ZCSAlWeG0zxySBhl/sRj1LkMAb22lPEmTwVvMAsQQpvPVAQyRBDu80kYU4pEgFEBLe4FfNxI4SXuFXD/WWEt7hUbcSBgkWePS1ikaCDZ7kXuhHghWe9LIK6iJycnJy/i4vAQYACbzhqL+aIw8AAAAASUVORK5CYII='))
+
+        &:after
+            animation checkboxHighlight .25s ease
+
+label:hover
+
+    input[type="checkbox"] + i
+    input[type="radio"] + i
+
+        &:before
+            border-color #c0c0d0
+
+    input[type="checkbox"]:checked + i
+    input[type="radio"]:checked + i
+
+        &:before
+            border-color #aaaaaa
+
+select
+    @extends .input
+    background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAACQCAYAAAB9JfdgAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAbZJREFUeNrs2NFNwkAcwOFqHMARHEE3kAeeHcEygXEEJzBOII7gMw+4gYzACIzgv8lpjCnSKwVt+33JpZEQ2v5yae8sCgAAAAAAAAAAAAAAAAAAAAAAAAAA+AdO6j5cLBZlHG5ibGK8TKfTt0NfSJzzOg63Mc5jvMY554OLGzf5HIfyx8fzuNnZAcMe/ZzHcFozY8ua75UpwLHCfp6zHEzccPHLdzsP/EvYJtfTu7i7dBa4QdjeO/vx97ph4Ms4TuKZuGkRtXphLWNcNvj6us9x615o7w1vfJUbODPsKn77amiPhUkKt0sVaJmCdR42XUcxqLhpJlY39tZV4DZh2zxyerGJaPHS2RokM2zv17aNVwvpRucZM/hC2IYzt8UM3qQZvEorimXazo4ubOO4LQLfx3gcc9isuAda+A82bPYOLYV46OjcD0MOmz1zv83gavbusw2eDeFfigeJu2fgUYTdK27LwKMJu3fczMCjCpv9QtvykquCzdISbNvSbHRhO5m532Zw3abha1NRjNBJlz+Wtr93abtbBX2KsOsCAAAAAAAAAAAAAAAAAAAAAAAAAAD4Ox8CDADobqx51KJT1gAAAABJRU5ErkJggg==')
+    background-position right center
+    background-repeat no-repeat
+    background-size 29px 48px
+    cursor pointer
+
+    &:hover
+        @extends .input:hover
+        background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAACQCAYAAAB9JfdgAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcxJREFUeNrs2EFO4lAcwOHizMKlR/AIzg0wYe8RrEtXhh3b2bGbeALxCO5J8AZyBLwBR/Df5M1kYoq2paBtvy9pGkil7c8XXh9ZBgAAAAAAAAAAAAAAAAAAAAAAAAAA38Co7M35fJ7H7iq2bWyPs9ns+dAXEuccx+46trPYnuKci97FjZt8iF3+7u1F3OzNAcMe/ZzHcFIyYvOS4/IU4Fhh/54z703ccP7Bsa0H/iBslevpXNzPtBa4QtjO+/nu9aZi4IvYX8Z34rZB1GLCWsV2UeHwTZfjlk1oLxVvfF03cM2w6/jsX337WrhM4T5TBFqlYK2HTdeR9SpuGonFjT23FbhJ2CZfOZ1YRDSYdHYGqRm288+2lZ8W0o0uaozgc2ErjtwGI3ibRvA6PVGs0nJ2cGErx20QeBrbnyGHrRX3QA/+vQ1b+FHn4OVy+TSZTIp/yLiFc/+OsNM+r9BGTf4o/aCyzzL4pg8/KR4k7p6BBxF2r7gNAw8m7N5xawYeVNjaE9qOSW4dk9xrmuROdzya3Q4tbCsj978RXLZo+LeoyAZo1OaHpeXvXVruFkHvI+wmAwAAAAAAAAAAAAAAAAAAAAAAAAAAvs6bAAMAxyurrPtMWJAAAAAASUVORK5CYII=')
+
+    &:focus
+        @extends .input:focus
+        background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAACQCAYAAAB9JfdgAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAbhJREFUeNrs2OFJw0AYgOEoDqAbuICgGyj43xFMJxBHcAJxAusI/hfqBhZcoBvYEfwCp4ikmkvTapLngSNYSpO8HMmdRQEAAAAAAAAAAAAAAAAAAAAAAAAAAP/ATt2HR09vZRwuYixjPLyeHzxv+kLinKdxuIyxH+MxzjkdXNy4yfs4lN8+nsbNTjYYduvn3Ibdmhlb1nyvTAG2FfbjnOVg4obDH77beeAfwja5nt7F/U1ngRuE7b29b38vGgY+juNZPBOXLaJWL6xZjOMGX1/0OW7dC+2l4Y3PcwNnhp3Hb58M7bFwlsL9pgo0S8E6D5uuoxhU3DQTqxt77ipwm7BtHjm92ES0eOmsDJIZtvdr28arhXSj04wZfChsw5nbYgYv0wyepxXFLG1nRxe2cdwWga9j3I45bFbcDS38Bxs2e4eWQtx0dO6bIYfNnrlfZnA1e9fZBk+G8C/FjcRdM/Aowq4Vt2Xg0YRdO25m4FGFzX6hrXjJVcEmaQm2amk2urCdzNwvM7hu0/C5qShGaKfLH0vb36u03a2C3kXYRQEAAAAAAAAAAAAAAAAAAAAAAAAAAPyddwEGAFenqgrY7g5wAAAAAElFTkSuQmCC')

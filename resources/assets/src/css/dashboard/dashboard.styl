@@ -1,0 +1,53 @@
+.dashboard
+    min-width 1000px
+    max-width 1200px
+    min-height 100%
+    padding-right 48px
+    background-color #ffffff
+
+    .dashboard__header
+        padding-left 104px
+        margin-bottom 24px
+
+        .dashboard__header__inner
+            padding 16px 0
+            border-bottom solid 1px #eeeeee
+
+            .dashboard__header__inner__logo
+                box-sizing border-box
+                display inline-block
+                vertical-align middle
+                width 72px
+                height 40px
+                background-image url(/pallant/taniquetil/images/logo.svg)
+                background-position center center
+                background-repeat no-repeat
+                background-size 100% 100%
+
+    .dashboard__body
+        padding-left 104px
+        padding-bottom 60px
+        color: Colors.defaultText
+
+
+        h1
+        h2
+        h3
+            font-family: Fonts.heading
+            font-weight normal
+
+        h1
+            font-size 38px
+
+        h2
+            font-size 28px
+
+        h3
+            font-size 20px
+
+        h4
+            font-size 16px
+
+@require 'components/**/*.styl'
+@require 'partials/**/*.styl'
+@require 'dashboards/**/*.styl'

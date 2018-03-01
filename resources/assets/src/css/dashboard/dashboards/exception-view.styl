@@ -1,0 +1,80 @@
+.dbExceptionView
+
+    .dbExceptionView__controls
+        display flex
+        padding 0 0 24px 0
+        margin-bottom 24px
+        border-bottom solid 1px #eeeeee
+
+        .dbExceptionView__controls__actions
+            margin-left 48px
+
+        .dbExceptionView__controls__traverse
+            margin-left auto
+
+    .dbExceptionView__exception
+
+        h1
+            margin-top 0
+
+            span
+                display inline-block
+                white-space nowrap
+
+        p
+            margin-bottom 0
+
+    .dbExceptionView__cols
+        display flex
+        width 100%
+        padding-top 36px
+
+        h2
+            color: Colors.primary
+
+        .dbExceptionView__cols__exception
+            box-sizing border-box
+            width 55%
+            padding-right 36px
+
+            .stackTraceFrame
+                margin-bottom 24px
+
+                &:last-child
+                    margin-bottom 0
+
+        .dbExceptionView__cols__request
+            box-sizing border-box
+            width 45%
+            padding-left 18px
+
+            h2
+                padding-left 24px
+
+            .dbExceptionView__cols__request__row
+                padding 23px 24px 24px 24px
+                border-radius 3px
+
+                &:nth-child(odd)
+                    background-color #ffffff
+
+                &:nth-child(even)
+                    background-color #f5f5f5
+
+                h3
+                h4
+                    margin-top 0
+                    line-height 1.2
+
+                h4
+                    margin-bottom 12px
+
+                span
+                    overflow-wrap break-word
+                    word-wrap break-word
+
+                .requestInput
+                    margin-bottom 24px
+
+                    &:last-child
+                        margin-bottom 0

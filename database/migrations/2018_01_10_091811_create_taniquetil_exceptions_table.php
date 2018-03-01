@@ -24,7 +24,7 @@ class CreateTaniquetilExceptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('taniquetil_exceptions', function (Blueprint $table) {
+        Schema::connection($this->connection)->create('taniquetil_exceptions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('type', 255);
             $table->text('message');
@@ -45,7 +45,7 @@ class CreateTaniquetilExceptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('taniquetil_exceptions');
+        Schema::connection($this->connection)->dropIfExists('taniquetil_exceptions');
     }
 
 }

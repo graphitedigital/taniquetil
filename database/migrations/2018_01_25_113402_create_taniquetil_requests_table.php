@@ -24,7 +24,7 @@ class CreateTaniquetilRequestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('taniquetil_requests', function (Blueprint $table) {
+        Schema::connection($this->connection)->create('taniquetil_requests', function (Blueprint $table) {
 
             $table->increments('id');
             $table->integer('exception')->unsigned();
@@ -50,6 +50,6 @@ class CreateTaniquetilRequestsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('taniquetil_requests');
+        Schema::connection($this->connection)->dropIfExists('taniquetil_requests');
     }
 }

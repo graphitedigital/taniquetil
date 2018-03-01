@@ -24,7 +24,7 @@ class CreateTaniquetilRequestInputTable extends Migration
      */
     public function up()
     {
-        Schema::create('taniquetil_request_input', function (Blueprint $table) {
+        Schema::connection($this->connection)->create('taniquetil_request_input', function (Blueprint $table) {
 
             $table->integer('request')->unsigned();
             $table->string('type', 4);
@@ -42,6 +42,6 @@ class CreateTaniquetilRequestInputTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('taniquetil_request_input');
+        Schema::connection($this->connection)->dropIfExists('taniquetil_request_input');
     }
 }

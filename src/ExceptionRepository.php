@@ -558,11 +558,7 @@ class ExceptionRepository
     {
         if (is_array($value)) {
             foreach ($value as $i => $val) {
-                $input = new stdClass;
-                $input->type = $type;
-                $input->key = $key . '[' . $i . ']';
-                $input->value = $val;
-                $arr[] = $input;
+                $this->mergeRequestInput($type, $key . '[' . $i . ']', $val, $arr);
             }
         } else {
             $input = new stdClass;

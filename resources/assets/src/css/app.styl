@@ -1,0 +1,65 @@
+/* ============================================================================
+ | Config
+ * ========================================================================= */
+
+Fonts = {}
+Fonts.heading = 'Roboto Slab'\, serif
+Fonts.primary = 'Raleway'\, sans-serif
+
+FontSize = {}
+FontSize.base = 14px
+
+Colors = {}
+Colors.primary = #2dbcef
+Colors.paleBlue = #9cdff7
+Colors.paleOrgane = #fde4ba
+Colors.red = #c24a1f
+Colors.defaultText = #393939
+
+
+/* ============================================================================
+ | Resets
+ * ========================================================================= */
+
+html
+    background-color #f1f1f1
+
+html
+body
+    height 100%
+    padding 0
+    margin 0
+    font-family: Fonts.primary
+    font-size: FontSize.base
+    line-height 1.6
+
+input
+select
+textarea
+button
+    appearance none
+    padding 0
+    margin 0
+    font-family: Fonts.primary
+    font-size: FontSize.base
+    border none
+    border-radius 0
+    outline none
+    resize none
+
+
+/* ============================================================================
+ | Common
+ * ========================================================================= */
+
+@require './common/**/*.styl'
+
+
+/* ============================================================================
+ | Dashboard
+ * ========================================================================= */
+
+#app
+    height 100%
+
+@require './dashboard/dashboard.styl'

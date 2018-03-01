@@ -1,0 +1,18 @@
+.exceptionValue
+
+    .exceptionValue__content
+        display inline
+
+    .exceptionValue__content.exceptionValue__content--wrapInQuotes
+
+        &:before
+            @extends .char
+            @extends .char.char--quote:before
+
+        &:after
+            @extends .char
+            @extends .char.char--quote:before
+
+    .icon
+        margin-left 6px
+        cursor pointer

@@ -1,0 +1,28 @@
+{
+    "name": "pallant/taniquetil",
+    "description": "An exceptions dashboard for Laravel",
+    "keywords": [
+        "php",
+        "laravel",
+        "exceptions"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arran Jacques",
+            "email": "arranjacques@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">= 7.1.0",
+        "laravel/framework": ">= 5.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pallant\\Taniquetil\\": "src/"
+        },
+        "files": [
+            "src/Support/helpers.php"
+        ]
+    }
+}

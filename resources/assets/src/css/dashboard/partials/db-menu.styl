@@ -1,0 +1,38 @@
+.dbMenu
+    box-sizing border-box
+    position fixed
+    top 0
+    left 0
+    width 60px
+    height 100%
+    padding-top 73px
+    background-color #dfdfdf
+
+    .dbMenu__option
+        display block
+        position relative
+        width 60px
+        height 60px
+        cursor pointer
+
+        &:hover
+
+            i
+                color: Colors.primary
+
+        i
+            position absolute
+            top 50%
+            left 50%
+            width 22px
+            height 22px
+            margin -11px 0 0 -11px
+            color #777777
+            font-size 22px
+
+    .dbMenu__option.dbMenu__option--active
+        background-color white
+
+        i
+            color: Colors.primary
+

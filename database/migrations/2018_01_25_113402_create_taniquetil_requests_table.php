@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-use Pallant\Taniquetil\Support\Traits\DatabaseConnection;
+use ArranJacques\Taniquetil\Support\Traits\DatabaseConnection;
 
 class CreateTaniquetilRequestsTable extends Migration
 {

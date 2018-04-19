@@ -1,6 +1,6 @@
 <?php
 
-namespace Pallant\Taniquetil\Http\Controllers;
+namespace ArranJacques\Taniquetil\Http\Controllers;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;

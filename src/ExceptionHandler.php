@@ -1,10 +1,10 @@
 <?php
 
-namespace Pallant\Taniquetil;
+namespace ArranJacques\Taniquetil;
 
 use Illuminate\Http\Request;
-use Pallant\Taniquetil\Exceptions\InternalErrorException;
-use Pallant\Taniquetil\Exceptions\TaniquetilException;
+use ArranJacques\Taniquetil\Exceptions\InternalErrorException;
+use ArranJacques\Taniquetil\Exceptions\TaniquetilException;
 use Symfony\Component\Debug\Exception\FatalThrowableError;
 use Throwable;
 
@@ -24,12 +24,12 @@ class ExceptionHandler
     protected $config;
 
     /**
-     * @var \Pallant\Taniquetil\ExceptionRepository
+     * @var \ArranJacques\Taniquetil\ExceptionRepository
      */
     protected $exceptionRepo;
 
     /**
-     * @var \Pallant\Taniquetil\Notifier
+     * @var \ArranJacques\Taniquetil\Notifier
      */
     protected $notifier;
 
@@ -42,8 +42,8 @@ class ExceptionHandler
      * ExceptionHandler constructor.
      *
      * @param array $config
-     * @param \Pallant\Taniquetil\ExceptionRepository $exceptionRepo
-     * @param \Pallant\Taniquetil\Notifier $notifier
+     * @param \ArranJacques\Taniquetil\ExceptionRepository $exceptionRepo
+     * @param \ArranJacques\Taniquetil\Notifier $notifier
      * @param \Illuminate\Http\Request|null $request
      */
     public function __construct(
@@ -62,8 +62,8 @@ class ExceptionHandler
      * Handle an exception.
      *
      * @param \Throwable $exception
-     * @throws \Pallant\Taniquetil\Exceptions\InternalErrorException
-     * @throws \Pallant\Taniquetil\Exceptions\TaniquetilException
+     * @throws \ArranJacques\Taniquetil\Exceptions\InternalErrorException
+     * @throws \ArranJacques\Taniquetil\Exceptions\TaniquetilException
      * @throws \Throwable
      */
     public function handle(Throwable $exception)

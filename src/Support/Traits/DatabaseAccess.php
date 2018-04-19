@@ -1,6 +1,6 @@
 <?php
 
-namespace Pallant\Taniquetil\Support\Traits;
+namespace ArranJacques\Taniquetil\Support\Traits;
 
 use Illuminate\Database\ConnectionInterface;
 

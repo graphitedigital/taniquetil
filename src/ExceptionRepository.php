@@ -1,6 +1,6 @@
 <?php
 
-namespace Pallant\Taniquetil;
+namespace ArranJacques\Taniquetil;
 
 use Carbon\Carbon;
 use Illuminate\Database\DatabaseManager;
@@ -8,8 +8,8 @@ use Illuminate\Database\Query\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Collection;
-use Pallant\Taniquetil\Support\Traits\ParseException;
-use Pallant\Taniquetil\Support\Traits\Repository;
+use ArranJacques\Taniquetil\Support\Traits\ParseException;
+use ArranJacques\Taniquetil\Support\Traits\Repository;
 use stdClass;
 use Throwable;
 
@@ -50,7 +50,7 @@ class ExceptionRepository
      * Get an exception by its id.
      *
      * @param int $id
-     * @return null|\Pallant\Taniquetil\Exception
+     * @return null|\ArranJacques\Taniquetil\Exception
      */
     public function get(int $id):? Exception
     {
@@ -148,7 +148,7 @@ class ExceptionRepository
      * @param int $id
      * @param string $orderBy
      * @param string $orderDir
-     * @return null|\Pallant\Taniquetil\Exception
+     * @return null|\ArranJacques\Taniquetil\Exception
      */
     public function getPreceding(int $id, string $orderBy = 'id', string $orderDir = 'asc'):? Exception
     {
@@ -163,7 +163,7 @@ class ExceptionRepository
      * @param int $id
      * @param string $orderBy
      * @param string $orderDir
-     * @return null|\Pallant\Taniquetil\Exception
+     * @return null|\ArranJacques\Taniquetil\Exception
      */
     public function getFollowing(int $id, string $orderBy = 'id', string $orderDir = 'asc'):? Exception
     {
@@ -175,7 +175,7 @@ class ExceptionRepository
      * @param string $orderDir
      * @param int $id
      * @param string $operator
-     * @return null|\Pallant\Taniquetil\Exception
+     * @return null|\ArranJacques\Taniquetil\Exception
      */
     protected function getNextException(
         string $orderBy,
@@ -289,7 +289,7 @@ class ExceptionRepository
      *
      * @param \Throwable $exception
      * @param \Illuminate\Http\Request|null $request
-     * @return \Pallant\Taniquetil\Exception
+     * @return \ArranJacques\Taniquetil\Exception
      */
     public function put(Throwable $exception, Request $request = null): Exception
     {
@@ -333,7 +333,7 @@ class ExceptionRepository
      * Include archived exceptions in fetch queries.
      *
      * @param bool $include
-     * @return \Pallant\Taniquetil\ExceptionRepository
+     * @return \ArranJacques\Taniquetil\ExceptionRepository
      */
     public function includeArchived(bool $include = true): ExceptionRepository
     {
@@ -452,7 +452,7 @@ class ExceptionRepository
 
     /**
      * @param \stdClass $result
-     * @return \Pallant\Taniquetil\Exception
+     * @return \ArranJacques\Taniquetil\Exception
      */
     protected function standardiseResult(stdClass $result): Exception
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pallant\Taniquetil;
+namespace ArranJacques\Taniquetil;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Collection;

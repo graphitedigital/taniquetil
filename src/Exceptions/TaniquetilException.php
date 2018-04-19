@@ -1,6 +1,6 @@
 <?php
 
-namespace Pallant\Taniquetil\Exceptions;
+namespace ArranJacques\Taniquetil\Exceptions;
 
 use RuntimeException;
 

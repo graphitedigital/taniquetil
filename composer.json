@@ -1,5 +1,5 @@
 {
-    "name": "pallant/taniquetil",
+    "name": "arranjacques/taniquetil",
     "description": "An exceptions dashboard for Laravel",
     "keywords": [
         "php",
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Pallant\\Taniquetil\\": "src/"
+            "ArranJacques\\Taniquetil\\": "src/"
         },
         "files": [
             "src/Support/helpers.php"

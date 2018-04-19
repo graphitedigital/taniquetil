@@ -1,25 +1,25 @@
 <?php
 
-namespace Pallant\Taniquetil\Mail;
+namespace ArranJacques\Taniquetil\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Pallant\Taniquetil\Exception;
+use ArranJacques\Taniquetil\Exception;
 
 class ExceptionMail extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
-     * @var \Pallant\Taniquetil\Exception
+     * @var \ArranJacques\Taniquetil\Exception
      */
     protected $exception;
 
     /**
      * ExceptionMail constructor.
      *
-     * @param \Pallant\Taniquetil\Exception $exception
+     * @param \ArranJacques\Taniquetil\Exception $exception
      */
     public function __construct(Exception $exception)
     {

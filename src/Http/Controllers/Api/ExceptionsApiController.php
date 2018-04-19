@@ -1,23 +1,23 @@
 <?php
 
-namespace Pallant\Taniquetil\Http\Controllers\Api;
+namespace ArranJacques\Taniquetil\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
-use Pallant\Taniquetil\Exception;
-use Pallant\Taniquetil\ExceptionRepository;
-use Pallant\Taniquetil\Http\Controllers\TaniquetilController;
+use ArranJacques\Taniquetil\Exception;
+use ArranJacques\Taniquetil\ExceptionRepository;
+use ArranJacques\Taniquetil\Http\Controllers\TaniquetilController;
 
 class ExceptionsApiController extends TaniquetilController
 {
     /**
-     * @var \Pallant\Taniquetil\ExceptionRepository
+     * @var \ArranJacques\Taniquetil\ExceptionRepository
      */
     protected $exceptionRepo;
 
     /**
      * ExceptionsApiController constructor.
      *
-     * @param \Pallant\Taniquetil\ExceptionRepository $exceptionRepo
+     * @param \ArranJacques\Taniquetil\ExceptionRepository $exceptionRepo
      */
     public function __construct(ExceptionRepository $exceptionRepo)
     {

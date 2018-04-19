@@ -1,6 +1,6 @@
 @php
 /**
- * @var $exception Pallant\Taniquetil\Exception
+ * @var $exception ArranJacques\Taniquetil\Exception
  */
 @endphp
 

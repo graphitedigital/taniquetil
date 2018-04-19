@@ -89,7 +89,7 @@ return [
     'notification-channels' => [
 
         'mail' => [
-            'driver' => \Pallant\Taniquetil\NotificationChannels\MailChannel::class,
+            'driver' => \ArranJacques\Taniquetil\NotificationChannels\MailChannel::class,
             'mail-driver' => 'default',
             'subject' => '{domain} :: An exception occurred',
             'to' => [

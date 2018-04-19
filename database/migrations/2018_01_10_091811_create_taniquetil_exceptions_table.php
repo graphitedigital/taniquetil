@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Pallant\Taniquetil\Support\Traits\DatabaseConnection;
+use ArranJacques\Taniquetil\Support\Traits\DatabaseConnection;
 
 class CreateTaniquetilExceptionsTable extends Migration
 {

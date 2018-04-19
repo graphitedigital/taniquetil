@@ -1,6 +1,6 @@
 <?php
 
-namespace Pallant\Taniquetil\Http\Middleware;
+namespace ArranJacques\Taniquetil\Http\Middleware;
 
 use Closure;
 
@@ -32,7 +32,7 @@ class AuthenticateRequest
      * @param \Illuminate\Http\Request $request
      * @param string|\Closure $authenticate
      * @return mixed
-     * @throws \Pallant\Taniquetil\Exceptions\TaniquetilException
+     * @throws \ArranJacques\Taniquetil\Exceptions\TaniquetilException
      */
     protected function authenticate($request, $authenticate)
     {

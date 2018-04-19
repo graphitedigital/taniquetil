@@ -17,16 +17,16 @@ Taniquetil is a simple exceptions dashboard and notifier for Laravel 5.5+. It ca
 
 ## Installation and Setup
 
-Add `pallant/taniquetil` to tour composer.json and run composer update to pull down the latest version:
+Add `arranjacques/taniquetil` to your composer.json and run composer update to pull down the latest version:
 
 ```
-"pallant/taniquetil": "~1.0"
+"arranjacques/taniquetil": "~1.0"
 ```
 
 Or use composer require:
 
 ```
-composer require pallant/taniquetil
+composer require arranjacques/taniquetil
 ```
 
 Add the service provider to the providers array in `config/app.php`.
@@ -34,7 +34,7 @@ Add the service provider to the providers array in `config/app.php`.
 ```
 'providers' => [
     ...
-    Pallant\Taniquetil\TaniquetilServiceProvider::class,
+    ArranJacques\Taniquetil\TaniquetilServiceProvider::class,
     ...
 ]
 ```
@@ -42,7 +42,7 @@ Add the service provider to the providers array in `config/app.php`.
 Publish the config and asset files.
 
 ```php
-php artisan vendor:publish --provider="Pallant\Taniquetil\TaniquetilServiceProvider"
+php artisan vendor:publish --provider="ArranJacques\Taniquetil\TaniquetilServiceProvider"
 ```
 
 Run the migrations to create the database tables. By default the tables will be created in your default database however if you want to use a different database you can by setting the `database-connection` property in `config/taniquetil.php` 
@@ -78,7 +78,7 @@ public function report(Exception $exception)
 To the `render()` method:
 
 ```php
-if ($exception instanceof \Pallant\Taniquetil\Exceptions\InternalErrorException) {
+if ($exception instanceof \ArranJacques\Taniquetil\Exceptions\InternalErrorException) {
     $exception = $exception->getOriginal();
 }
 ```
@@ -88,7 +88,7 @@ E.G.:
 ```php
 public function render($request, Exception $exception)
 {
-    if ($exception instanceof \Pallant\Taniquetil\Exceptions\InternalErrorException) {
+    if ($exception instanceof \ArranJacques\Taniquetil\Exceptions\InternalErrorException) {
         $exception = $exception->getOriginal();
     }
 

@@ -18,7 +18,7 @@ if (!function_exists('taniquetil_asset_url')) {
             return null;
         }
 
-        $uri = 'pallant/taniquetil/build/' . $path;
+        $uri = 'arranjacques/taniquetil/build/' . $path;
 
         return $full ? url($uri) : '/' . $uri;
     }

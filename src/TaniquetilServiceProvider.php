@@ -1,14 +1,14 @@
 <?php
 
-namespace Pallant\Taniquetil;
+namespace ArranJacques\Taniquetil;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Mail\Mailer;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
-use Pallant\Taniquetil\Http\Middleware\AuthenticateRequest;
-use Pallant\Taniquetil\NotificationChannels\MailChannel;
+use ArranJacques\Taniquetil\Http\Middleware\AuthenticateRequest;
+use ArranJacques\Taniquetil\NotificationChannels\MailChannel;
 use Swift_Mailer;
 
 class TaniquetilServiceProvider extends ServiceProvider
@@ -16,7 +16,7 @@ class TaniquetilServiceProvider extends ServiceProvider
     /**
      * @var string
      */
-    protected $namespace = 'Pallant\Taniquetil\Http\Controllers';
+    protected $namespace = 'ArranJacques\Taniquetil\Http\Controllers';
 
     /**
      * Boot any Taniquetil services.
@@ -28,9 +28,9 @@ class TaniquetilServiceProvider extends ServiceProvider
         ], 'config');
 
         $this->publishes([
-            __DIR__ . '/../resources/assets/build' => public_path('pallant/taniquetil/build'),
-            __DIR__ . '/../resources/assets/fonts' => public_path('pallant/taniquetil/fonts'),
-            __DIR__ . '/../resources/assets/images' => public_path('pallant/taniquetil/images'),
+            __DIR__ . '/../resources/assets/build' => public_path('arranjacques/taniquetil/build'),
+            __DIR__ . '/../resources/assets/fonts' => public_path('arranjacques/taniquetil/fonts'),
+            __DIR__ . '/../resources/assets/images' => public_path('arranjacques/taniquetil/images'),
         ], 'public');
 
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
@@ -149,7 +149,7 @@ class TaniquetilServiceProvider extends ServiceProvider
     protected function registerAssetManifest()
     {
         $this->app->singleton('taniquetil-asset-revision-manifest', function () {
-            $path = public_path('pallant/taniquetil/build/rev-manifest.json');
+            $path = public_path('arranjacques/taniquetil/build/rev-manifest.json');
             if (file_exists($path)) {
                 return json_decode(file_get_contents($path));
             } else {

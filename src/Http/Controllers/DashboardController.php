@@ -1,6 +1,6 @@
 <?php
 
-namespace Pallant\Taniquetil\Http\Controllers;
+namespace ArranJacques\Taniquetil\Http\Controllers;
 
 class DashboardController extends TaniquetilController
 {

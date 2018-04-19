@@ -1,11 +1,11 @@
 <?php
 
-namespace Pallant\Taniquetil\NotificationChannels;
+namespace ArranJacques\Taniquetil\NotificationChannels;
 
 use Illuminate\Mail\Mailer;
-use Pallant\Taniquetil\Exception;
-use Pallant\Taniquetil\Mail\ExceptionMail;
-use Pallant\Taniquetil\Support\Traits\ParseException;
+use ArranJacques\Taniquetil\Exception;
+use ArranJacques\Taniquetil\Mail\ExceptionMail;
+use ArranJacques\Taniquetil\Support\Traits\ParseException;
 
 class MailChannel implements NotificationChannelDriver
 {
@@ -36,7 +36,7 @@ class MailChannel implements NotificationChannelDriver
     /**
      * Notify of a given exception.
      *
-     * @param \Pallant\Taniquetil\Exception|\Throwable $exception
+     * @param \ArranJacques\Taniquetil\Exception|\Throwable $exception
      */
     public function notify($exception)
     {
@@ -50,7 +50,7 @@ class MailChannel implements NotificationChannelDriver
     }
 
     /**
-     * @param \Pallant\Taniquetil\Exception $exception
+     * @param \ArranJacques\Taniquetil\Exception $exception
      * @param array $to
      */
     protected function sendEmail(Exception $exception, array $to)

@@ -1,9 +1,9 @@
 <?php
 
-namespace Pallant\Taniquetil;
+namespace ArranJacques\Taniquetil;
 
-use Pallant\Taniquetil\Exceptions\TaniquetilException;
-use Pallant\Taniquetil\NotificationChannels\NotificationChannelDriver;
+use ArranJacques\Taniquetil\Exceptions\TaniquetilException;
+use ArranJacques\Taniquetil\NotificationChannels\NotificationChannelDriver;
 
 class Notifier
 {
@@ -31,8 +31,8 @@ class Notifier
      * Get a given notification channel.
      *
      * @param string $channel
-     * @return \Pallant\Taniquetil\NotificationChannels\NotificationChannelDriver
-     * @throws \Pallant\Taniquetil\Exceptions\TaniquetilException
+     * @return \ArranJacques\Taniquetil\NotificationChannels\NotificationChannelDriver
+     * @throws \ArranJacques\Taniquetil\Exceptions\TaniquetilException
      */
     public function channel(string $channel): NotificationChannelDriver
     {
